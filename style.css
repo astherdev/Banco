@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #c4c4c4;
+    text-align: center;
+}
+img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: -130px;
+    border-radius: 50%;
+}
+#banco{
+    margin-top: 150px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#sucursal{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #5bfffa, #c30701);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+
+#titular{
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#nro_cuenta{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+#saldo_usd{
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#saldo_eur{
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#nro_banco{
+    font-size: 20px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+#abierto{
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+

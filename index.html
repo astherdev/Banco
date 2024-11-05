@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Banco de Springfield</title>
+</head>
+<body>
+    <img src="img/Leonardo_Phoenix_Create_a_logo_design_for_Banco_de_Springfield_1.jpg">
+    <div id="banco"></div>
+    <div id="sucursal"></div>
+    <hr>
+    <div id="titular"></div>
+    <div id="nro_cuenta"></div>
+    <hr>
+    <div id="saldo_usd"></div>
+    <div id="saldo_eur"></div>
+    <hr>
+    <div id="nro_banco"></div>
+    <div id="abierto"></div>
+    <script>
+        let datosJson;
+        fetch('banco.json')
+        .then(response => response.json())
+        .then((salida) =>{
+            datosJson = salida
+            let  elementoTexto = document.getElementById("banco")
+            elementoTexto.textContent = datosJson.banco
+
+            elementoTexto = document.getElementById("sucursal")
+            elementoTexto.textContent = datosJson.sucursal
+
+            elementoTexto = document.getElementById("titular")
+            elementoTexto.textContent = datosJson.titular
+
+            elementoTexto = document.getElementById("nro_cuenta")
+            elementoTexto.textContent = "Nro Cuenta:  " + datosJson.nro_cuenta
+
+
+            elementoTexto = document.getElementById("saldo_usd");
+            elementoTexto.textContent = "Saldo (USD): " + datosJson.saldo[0].monto;
+
+            elementoTexto = document.getElementById("saldo_eur");
+            elementoTexto.textContent = "Saldo (EUR): " + datosJson.saldo[1].monto;
+
+            elementoTexto = document.getElementById("nro_banco");
+            elementoTexto.textContent = "CBU: " + datosJson.nro_banco;
+
+            elementoTexto = document.getElementById("abierto")
+            elementoTexto.textContent = "Abierto: " +datosJson.abierto;
+
+
+
+        })
+    </script>
+</body>
+</html>
